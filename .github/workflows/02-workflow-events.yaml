@@ -2,6 +2,10 @@ name: 02-Workflow Events
 
 on:
    push:
+   pull_request:
+   workflow_dispatch:
+   schedule:
+     - cron: '0 0 * * *' # every day at midnight
 jobs:
   echo:
     runs-on: ubuntu-latest
