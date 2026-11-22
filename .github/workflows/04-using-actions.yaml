@@ -1,0 +1,14 @@
+name: 04 - Using Actions
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v7
+
+        - name: Printing Folder
+          run: |
+            echo "Printing the folder structure"
+            find . -maxdepth 1 -type d
